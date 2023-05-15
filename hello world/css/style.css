@@ -1,0 +1,157 @@
+body{
+font-family: sans-serif;
+margin: 3rem;
+background-image: url(/img/tile.png);
+}        
+    
+.grid-container {
+display: grid;
+grid-template-columns: repeat(12, 1fr);
+grid-template-rows: auto;
+margin-top: 5em;
+}
+  
+.container {
+display: grid;
+justify-content: center; 
+align-items: center; 
+}
+  
+  
+.header {
+grid-area: header;
+background-image: url(/img/adesivo-parede-tropical-folhagem-selva-jungle-parede-g1013-papel-de-parede-tropical.jpg);
+background-attachment:fixed,  scroll;
+background-size: cover;
+border: 0.2em solid #000;
+grid-column: 1 / 13;
+grid-row: 1;
+background-color: #ccc;
+padding: 20px;
+}
+  
+.header-h1{
+display: grid;
+justify-content: center; 
+align-items: center; 
+text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+padding: 1.5em;
+color: rgb(61, 159, 67);
+background-color: #cccccc84;
+}
+
+p{
+text-align: center;
+}
+
+.ul{
+display: grid;
+justify-content: center; 
+align-items: center; 
+list-style:none;
+margin: auto;
+}
+  
+.ul li{
+margin: 1em;
+padding: 1em;
+text-align: center;
+width: 15em;
+border-radius: 0.8em;
+font-size: 1.2em;
+text-transform: uppercase;
+cursor: pointer;
+margin-top: 2em;
+justify-content: center; 
+align-items: center;
+background-color: #49bf9d;
+border: 3px solid #0a0a0a;
+color: #ffff;
+text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+  
+  
+  
+.ul li:hover{
+background-color: #e0dddd;
+color:rgb(8, 61, 142);
+box-shadow: 1em 0.5em 0.5em rgb(10, 9, 9);
+transition: color linear 0.5s;
+
+}
+  
+.sidebar {
+grid-column: 1 / 4;
+grid-row: 2;
+grid-area: sidebar;
+background-color: #d4d2d2;
+padding: 20px;
+margin: 2rem;
+}
+
+.main {
+grid-column: 4 / 13;
+grid-row: 2;
+grid-area: main;
+}
+ 
+section {
+margin: 20px;
+width: 300px;
+}
+
+.imagem img {
+max-width: 100%; 
+height: auto; 
+}
+  
+.footer {
+grid-column: 1 / 13;
+grid-row: 3;
+grid-area: footer;
+text-align: center;
+background-color: #333;
+color: #fff;
+padding: 20px;
+}
+
+  
+  
+@media screen and (max-width: 768px) {
+
+.grid-container {
+grid-template-columns: 1fr;
+grid-template-rows: auto auto auto auto;
+}
+    
+.header {
+grid-column: 1 / 2;
+grid-row: 1;
+}
+ 
+.sidebar {
+grid-column: 1 / 2;
+grid-row: 2;
+}
+  
+.main {
+grid-column: 1 / 2;
+grid-row: 3;
+flex-wrap: wrap;
+display: flex;
+justify-content: space-around;
+padding: 20px;
+background-color: #fff;
+}
+    
+.footer {
+grid-column: 1 / 2;
+grid-row: 4;
+}
+
+}  
+  
+  
+  
+  
+  
